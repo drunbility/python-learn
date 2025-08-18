@@ -1,0 +1,13 @@
+{% extends 'learning_app/base.html' %}
+
+{% block content %}
+  <p> Topics </p>
+    <ul>
+      {% for t in topics %}
+        <li>{{t.text}}</li>
+      {% empty %}
+        <li> no topics </li>
+      {% endfor %}
+    </ul>
+
+{% endblock content %}
