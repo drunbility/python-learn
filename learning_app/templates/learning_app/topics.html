@@ -4,10 +4,13 @@
   <p> Topics </p>
     <ul>
       {% for t in topics %}
-        <li>{{t.text}}</li>
+        <li> <a href="{% url 'learning_app:topic' t.id %}">{{t.text}} </a></li>
       {% empty %}
         <li> no topics </li>
       {% endfor %}
     </ul>
+
+
+<a href="{% url 'learning_app:new_topic' %}">add a new topic</a>
 
 {% endblock content %}
